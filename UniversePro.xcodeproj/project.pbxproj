@@ -17,6 +17,10 @@
 		0E5FB89B2949FC6F009B1878 /* Apod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FB89A2949FC6F009B1878 /* Apod.swift */; };
 		0E5FB89D2949FDC7009B1878 /* ApodApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FB89C2949FDC7009B1878 /* ApodApiManager.swift */; };
 		0E5FB89F2949FED0009B1878 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FB89E2949FED0009B1878 /* MainViewModel.swift */; };
+		0ED87579294A152600FD59CB /* ApodInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED87578294A152600FD59CB /* ApodInfoView.swift */; };
+		0ED8757B294A163000FD59CB /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED8757A294A163000FD59CB /* BackgroundView.swift */; };
+		0ED8757E294A17AB00FD59CB /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED8757D294A17AB00FD59CB /* LoadingView.swift */; };
+		0ED87580294A1CC000FD59CB /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED8757F294A1CC000FD59CB /* DatePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		0E5FB89A2949FC6F009B1878 /* Apod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apod.swift; sourceTree = "<group>"; };
 		0E5FB89C2949FDC7009B1878 /* ApodApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodApiManager.swift; sourceTree = "<group>"; };
 		0E5FB89E2949FED0009B1878 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		0ED87578294A152600FD59CB /* ApodInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodInfoView.swift; sourceTree = "<group>"; };
+		0ED8757A294A163000FD59CB /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		0ED8757D294A17AB00FD59CB /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		0ED8757F294A1CC000FD59CB /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 		0E5FB8732949F1F0009B1878 = {
 			isa = PBXGroup;
 			children = (
+				0ED8757F294A1CC000FD59CB /* DatePickerView.swift */,
 				0E5FB87E2949F1F1009B1878 /* UniversePro */,
 				0E5FB87D2949F1F1009B1878 /* Products */,
 			);
@@ -84,6 +93,7 @@
 		0E5FB88D2949F45E009B1878 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				0ED8757C294A163800FD59CB /* Components */,
 				0E5FB8932949F56D009B1878 /* TabBar */,
 				0E5FB88E2949F46C009B1878 /* Main */,
 			);
@@ -103,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				0E5FB8812949F1F1009B1878 /* MainView.swift */,
+				0ED87578294A152600FD59CB /* ApodInfoView.swift */,
 				0E5FB8902949F4B5009B1878 /* FindButtonView.swift */,
 			);
 			path = Views;
@@ -139,6 +150,15 @@
 				0E5FB89A2949FC6F009B1878 /* Apod.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0ED8757C294A163800FD59CB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0ED8757A294A163000FD59CB /* BackgroundView.swift */,
+				0ED8757D294A17AB00FD59CB /* LoadingView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,9 +231,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED8757B294A163000FD59CB /* BackgroundView.swift in Sources */,
 				0E5FB89B2949FC6F009B1878 /* Apod.swift in Sources */,
 				0E5FB8822949F1F1009B1878 /* MainView.swift in Sources */,
+				0ED8757E294A17AB00FD59CB /* LoadingView.swift in Sources */,
 				0E5FB89D2949FDC7009B1878 /* ApodApiManager.swift in Sources */,
+				0ED87579294A152600FD59CB /* ApodInfoView.swift in Sources */,
+				0ED87580294A1CC000FD59CB /* DatePickerView.swift in Sources */,
 				0E5FB8982949FC4C009B1878 /* FakeDataManager.swift in Sources */,
 				0E5FB8802949F1F1009B1878 /* UniverseProApp.swift in Sources */,
 				0E5FB8952949F582009B1878 /* StarterView.swift in Sources */,

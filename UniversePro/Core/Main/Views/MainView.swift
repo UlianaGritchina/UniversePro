@@ -10,47 +10,49 @@ import Combine
 
 struct MainView: View {
     @StateObject var vm = MainViewModel()
+    @State private var date = Date.now
     var body: some View {
         NavigationView {
             ZStack {
-                RadialGradient(
-                    colors: [.blue.opacity(0.8), .black],
-                    center: .center,
-                    startRadius: 5, endRadius: 500
-                )
-                .ignoresSafeArea()
-                
-                ScrollView(showsIndicators: false) {
-                    if vm.networkState == .loaded {
-                        Image(uiImage: (UIImage(data: vm.apodImageData) ?? UIImage(systemName: "heart"))!)
-                            .resizable()
-                            .scaledToFit()
-                            .cornerRadius(10)
-                        HStack {
-                            Text(vm.apod.title ?? "title")
-                                .font(.title)
-                            Spacer()
-                        }
-                        .padding(.vertical)
-                        Text(vm.apod.explanation ?? "text")
-                            .multilineTextAlignment(.center)
-                            .font(.system(.title2, design: .monospaced))
-                    } else {
-                        ProgressView()
+                BackgroundView()
+                if vm.networkState == .loaded {
+                    ScrollView(showsIndicators: false) {
+                        ApodInfoView(apod: vm.apod).padding()
+                    }
+                } else {
+                    VStack {
+                        Spacer()
+                        LoadingView()
+                        Spacer()
+                        Spacer()
                     }
                 }
-                .padding(.horizontal)
-                .navigationTitle("Universe Pro")
-                .toolbar {
-                    ToolbarItem {
-                        FindButtonView(action: {})
-                    }
+                Color.black
+                    .ignoresSafeArea()
+                    .opacity(vm.isShowingDatePicker ? 0.5 : 0)
+            }
+            .overlay(
+                DatePickerView(
+                    date: $vm.date,
+                    isShowing: vm.isShowingDatePicker,
+                    findAction: {}),
+                alignment: .top
+            )
+            .navigationTitle("Universe Pro")
+            .preferredColorScheme(.dark)
+            .toolbar {
+                ToolbarItem {
+                    FindButtonView(action: {
+                        withAnimation {
+                            vm.showDaetPicker()
+                        }
+                    })
                 }
             }
-            .preferredColorScheme(.dark)
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

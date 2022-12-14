@@ -12,13 +12,18 @@ class MainViewModel: ObservableObject {
     
     @Published var apod: Apod = FakeDataManager.shared.getApod()
     @Published var networkState: NetworkState = .none
-    @Published var apodImageData: Data = Data()
+    @Published var date: Date = Date()
+    @Published var isShowingDatePicker = false
     
     private let networkManager = ApodApiManager.shared
     var cancellables = Set<AnyCancellable>()
     
     init() {
-        fetchApod()
+       fetchApod()
+    }
+    
+    func showDaetPicker() {
+        isShowingDatePicker.toggle()
     }
     
     func fetchApod() {
@@ -57,7 +62,7 @@ class MainViewModel: ObservableObject {
                     self.networkState = .error
                     return
                 }
-                self.apodImageData = data
+                self.apod.imageData = data
                 self.networkState = .loaded
             }
             .store(in: &self.cancellables)

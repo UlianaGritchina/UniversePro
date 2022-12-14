@@ -13,4 +13,5 @@ struct Apod: Hashable, Decodable {
     let explanation: String?
     let url: String?
     let media_type: String?
+    var imageData: Data?
 }
