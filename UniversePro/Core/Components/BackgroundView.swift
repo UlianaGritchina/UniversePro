@@ -10,7 +10,7 @@ import SwiftUI
 struct BackgroundView: View {
     var body: some View {
         RadialGradient(
-            colors: [.blue.opacity(0.8), .black],
+            colors: [.blue, .black],
             center: .center,
             startRadius: 5, endRadius: 500
         )

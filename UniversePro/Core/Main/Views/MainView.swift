@@ -10,6 +10,7 @@ import Combine
 
 struct MainView: View {
     @StateObject var vm = MainViewModel()
+    @State private var isEndAnimation = false
     @State private var date = Date.now
     var body: some View {
         NavigationView {
@@ -20,16 +21,18 @@ struct MainView: View {
                         ApodInfoView(apod: vm.apod).padding()
                     }
                 } else {
-                    VStack {
-                        Spacer()
-                        LoadingView()
-                        Spacer()
-                        Spacer()
-                    }
+                   AnimationView()
                 }
                 Color.black
                     .ignoresSafeArea()
                     .opacity(vm.isShowingDatePicker ? 0.5 : 0)
+            }
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    withAnimation {
+                        self.isEndAnimation = true
+                    }
+                }
             }
             .overlay(
                 DatePickerView(

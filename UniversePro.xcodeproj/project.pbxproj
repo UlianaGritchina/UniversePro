@@ -17,10 +17,14 @@
 		0E5FB89B2949FC6F009B1878 /* Apod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FB89A2949FC6F009B1878 /* Apod.swift */; };
 		0E5FB89D2949FDC7009B1878 /* ApodApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FB89C2949FDC7009B1878 /* ApodApiManager.swift */; };
 		0E5FB89F2949FED0009B1878 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FB89E2949FED0009B1878 /* MainViewModel.swift */; };
+		0EBDA6A7294CA5DD00E09C5E /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBDA6A6294CA5DD00E09C5E /* AnimationView.swift */; };
+		0EBDA6AB294CA6F800E09C5E /* rocket.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EBDA6AA294CA6F800E09C5E /* rocket.json */; };
+		0EBDA6AD294CA90800E09C5E /* spaceman.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EBDA6AC294CA90800E09C5E /* spaceman.json */; };
 		0ED87579294A152600FD59CB /* ApodInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED87578294A152600FD59CB /* ApodInfoView.swift */; };
 		0ED8757B294A163000FD59CB /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED8757A294A163000FD59CB /* BackgroundView.swift */; };
 		0ED8757E294A17AB00FD59CB /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED8757D294A17AB00FD59CB /* LoadingView.swift */; };
 		0ED87580294A1CC000FD59CB /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED8757F294A1CC000FD59CB /* DatePickerView.swift */; };
+		19AC1E7BE47C45251F193A7F /* Pods_UniversePro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462DD89E0B3D8189B3B7AA07 /* Pods_UniversePro.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +39,16 @@
 		0E5FB89A2949FC6F009B1878 /* Apod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apod.swift; sourceTree = "<group>"; };
 		0E5FB89C2949FDC7009B1878 /* ApodApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodApiManager.swift; sourceTree = "<group>"; };
 		0E5FB89E2949FED0009B1878 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		0EBDA6A6294CA5DD00E09C5E /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
+		0EBDA6AA294CA6F800E09C5E /* rocket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rocket.json; sourceTree = "<group>"; };
+		0EBDA6AC294CA90800E09C5E /* spaceman.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = spaceman.json; sourceTree = "<group>"; };
 		0ED87578294A152600FD59CB /* ApodInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodInfoView.swift; sourceTree = "<group>"; };
 		0ED8757A294A163000FD59CB /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		0ED8757D294A17AB00FD59CB /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0ED8757F294A1CC000FD59CB /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		462DD89E0B3D8189B3B7AA07 /* Pods_UniversePro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniversePro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E92461259770F5FC6CAF881 /* Pods-UniversePro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniversePro.release.xcconfig"; path = "Target Support Files/Pods-UniversePro/Pods-UniversePro.release.xcconfig"; sourceTree = "<group>"; };
+		F2E916EFF0A80DABE1B21B6F /* Pods-UniversePro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniversePro.debug.xcconfig"; path = "Target Support Files/Pods-UniversePro/Pods-UniversePro.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19AC1E7BE47C45251F193A7F /* Pods_UniversePro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,9 +66,10 @@
 		0E5FB8732949F1F0009B1878 = {
 			isa = PBXGroup;
 			children = (
-				0ED8757F294A1CC000FD59CB /* DatePickerView.swift */,
 				0E5FB87E2949F1F1009B1878 /* UniversePro */,
 				0E5FB87D2949F1F1009B1878 /* Products */,
+				659F3F5A0C7B0429CF696540 /* Pods */,
+				708313EDCD44ECEF90BFB330 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +84,7 @@
 		0E5FB87E2949F1F1009B1878 /* UniversePro */ = {
 			isa = PBXGroup;
 			children = (
+				0EBDA6A9294CA6E400E09C5E /* Lottie */,
 				0E5FB87F2949F1F1009B1878 /* UniverseProApp.swift */,
 				0E5FB8962949FC40009B1878 /* Managers */,
 				0E5FB8992949FC61009B1878 /* Models */,
@@ -94,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				0ED8757C294A163800FD59CB /* Components */,
-				0E5FB8932949F56D009B1878 /* TabBar */,
+				0E5FB8932949F56D009B1878 /* Starter */,
 				0E5FB88E2949F46C009B1878 /* Main */,
 			);
 			path = Core;
@@ -113,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				0E5FB8812949F1F1009B1878 /* MainView.swift */,
+				0EBDA6A6294CA5DD00E09C5E /* AnimationView.swift */,
+				0ED8757F294A1CC000FD59CB /* DatePickerView.swift */,
 				0ED87578294A152600FD59CB /* ApodInfoView.swift */,
 				0E5FB8902949F4B5009B1878 /* FindButtonView.swift */,
 			);
@@ -127,12 +142,12 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		0E5FB8932949F56D009B1878 /* TabBar */ = {
+		0E5FB8932949F56D009B1878 /* Starter */ = {
 			isa = PBXGroup;
 			children = (
 				0E5FB8942949F582009B1878 /* StarterView.swift */,
 			);
-			name = TabBar;
+			name = Starter;
 			sourceTree = "<group>";
 		};
 		0E5FB8962949FC40009B1878 /* Managers */ = {
@@ -152,6 +167,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		0EBDA6A9294CA6E400E09C5E /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				0EBDA6AC294CA90800E09C5E /* spaceman.json */,
+				0EBDA6AA294CA6F800E09C5E /* rocket.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		0ED8757C294A163800FD59CB /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +185,23 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		659F3F5A0C7B0429CF696540 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2E916EFF0A80DABE1B21B6F /* Pods-UniversePro.debug.xcconfig */,
+				8E92461259770F5FC6CAF881 /* Pods-UniversePro.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		708313EDCD44ECEF90BFB330 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				462DD89E0B3D8189B3B7AA07 /* Pods_UniversePro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,9 +209,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E5FB88A2949F1F1009B1878 /* Build configuration list for PBXNativeTarget "UniversePro" */;
 			buildPhases = (
+				920D8A3F3B7EFAA27AECA75C /* [CP] Check Pods Manifest.lock */,
 				0E5FB8782949F1F1009B1878 /* Sources */,
 				0E5FB8792949F1F1009B1878 /* Frameworks */,
 				0E5FB87A2949F1F1009B1878 /* Resources */,
+				C7FF6633B125F6933D37CC60 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,11 +263,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E5FB8872949F1F1009B1878 /* Preview Assets.xcassets in Resources */,
+				0EBDA6AD294CA90800E09C5E /* spaceman.json in Resources */,
 				0E5FB8842949F1F1009B1878 /* Assets.xcassets in Resources */,
+				0EBDA6AB294CA6F800E09C5E /* rocket.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		920D8A3F3B7EFAA27AECA75C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UniversePro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7FF6633B125F6933D37CC60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UniversePro/Pods-UniversePro-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UniversePro/Pods-UniversePro-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UniversePro/Pods-UniversePro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0E5FB8782949F1F1009B1878 /* Sources */ = {
@@ -238,6 +325,7 @@
 				0E5FB89D2949FDC7009B1878 /* ApodApiManager.swift in Sources */,
 				0ED87579294A152600FD59CB /* ApodInfoView.swift in Sources */,
 				0ED87580294A1CC000FD59CB /* DatePickerView.swift in Sources */,
+				0EBDA6A7294CA5DD00E09C5E /* AnimationView.swift in Sources */,
 				0E5FB8982949FC4C009B1878 /* FakeDataManager.swift in Sources */,
 				0E5FB8802949F1F1009B1878 /* UniverseProApp.swift in Sources */,
 				0E5FB8952949F582009B1878 /* StarterView.swift in Sources */,
@@ -365,6 +453,7 @@
 		};
 		0E5FB88B2949F1F1009B1878 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2E916EFF0A80DABE1B21B6F /* Pods-UniversePro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -395,6 +484,7 @@
 		};
 		0E5FB88C2949F1F1009B1878 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E92461259770F5FC6CAF881 /* Pods-UniversePro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

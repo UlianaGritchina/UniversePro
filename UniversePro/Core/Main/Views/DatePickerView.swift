@@ -19,6 +19,7 @@ struct DatePickerView: View {
                 displayedComponents: [.date]
             )
             .datePickerStyle(.graphical)
+            .foregroundColor(.blue)
             Button(action: findAction) {
                 Text("Find")
                     .frame(width: 150, height: 40)
