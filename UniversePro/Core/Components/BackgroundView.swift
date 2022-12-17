@@ -11,8 +11,8 @@ struct BackgroundView: View {
     var body: some View {
         RadialGradient(
             colors: [.blue, .black],
-            center: .center,
-            startRadius: 5, endRadius: 500
+            center: .bottom,
+            startRadius: 105, endRadius: UIScreen.main.bounds.height / 1.3
         )
         .ignoresSafeArea()
     }

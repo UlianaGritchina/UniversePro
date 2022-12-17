@@ -16,17 +16,27 @@ struct MainView: View {
         NavigationView {
             ZStack {
                 BackgroundView()
+                AnimationView()
+                    .opacity(vm.networkState == .loaded ? 0 : 1)
+                    .frame(width: vm.networkState == .loaded ? 0 : UIScreen.main.bounds.width)
+                    .offset(y: vm.networkState == .loaded ? -100 : 0)
+                
                 if vm.networkState == .loaded {
                     ScrollView(showsIndicators: false) {
                         ApodInfoView(apod: vm.apod).padding()
                     }
-                } else {
-                   AnimationView()
                 }
+                
                 Color.black
                     .ignoresSafeArea()
                     .opacity(vm.isShowingDatePicker ? 0.5 : 0)
+                    .onTapGesture {
+                        withAnimation {
+                            vm.showDaetPicker()
+                        }
+                    }
             }
+            .animation(.default, value: vm.networkState)
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     withAnimation {

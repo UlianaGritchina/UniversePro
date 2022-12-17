@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E5E88DF294DAEC500813785 /* spaceX.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E5E88DE294DAEC500813785 /* spaceX.json */; };
 		0E5FB8802949F1F1009B1878 /* UniverseProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FB87F2949F1F1009B1878 /* UniverseProApp.swift */; };
 		0E5FB8822949F1F1009B1878 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FB8812949F1F1009B1878 /* MainView.swift */; };
 		0E5FB8842949F1F1009B1878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5FB8832949F1F1009B1878 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E5E88DE294DAEC500813785 /* spaceX.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = spaceX.json; sourceTree = "<group>"; };
 		0E5FB87C2949F1F1009B1878 /* UniversePro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniversePro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E5FB87F2949F1F1009B1878 /* UniverseProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniverseProApp.swift; sourceTree = "<group>"; };
 		0E5FB8812949F1F1009B1878 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				0EBDA6AC294CA90800E09C5E /* spaceman.json */,
+				0E5E88DE294DAEC500813785 /* spaceX.json */,
 				0EBDA6AA294CA6F800E09C5E /* rocket.json */,
 			);
 			path = Lottie;
@@ -264,6 +267,7 @@
 			files = (
 				0E5FB8872949F1F1009B1878 /* Preview Assets.xcassets in Resources */,
 				0EBDA6AD294CA90800E09C5E /* spaceman.json in Resources */,
+				0E5E88DF294DAEC500813785 /* spaceX.json in Resources */,
 				0E5FB8842949F1F1009B1878 /* Assets.xcassets in Resources */,
 				0EBDA6AB294CA6F800E09C5E /* rocket.json in Resources */,
 			);

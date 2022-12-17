@@ -13,7 +13,7 @@ struct AnimationView: UIViewRepresentable {
     func makeUIView(context: Context) -> UIView {
         let view = UIView()
         
-        let animation = LottieAnimation.named("spaceman")
+        let animation = LottieAnimation.named("spaceX")
         
         let animationView = LottieAnimationView()
         animationView.animation = animation

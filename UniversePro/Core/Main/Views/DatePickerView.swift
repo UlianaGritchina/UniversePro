@@ -28,7 +28,6 @@ struct DatePickerView: View {
                     .background(Color.blue.cornerRadius(10))
             }
         }
-        .padding()
         .background {
             Rectangle()
                 .opacity(0)
