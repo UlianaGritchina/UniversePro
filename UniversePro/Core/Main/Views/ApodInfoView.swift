@@ -11,7 +11,7 @@ struct ApodInfoView: View {
     let apod: Apod
     @State private var isFavorite = false
     var body: some View {
-        VStack {
+        ScrollView(showsIndicators: false) {
             Image(uiImage: (UIImage(data: apod.imageData ?? Data()) ?? UIImage(systemName: "heart"))!)
                 .resizable()
                 .scaledToFit()
@@ -30,16 +30,17 @@ struct ApodInfoView: View {
                         isFavorite.toggle()
                     }
             }
+            .padding(.vertical)
+            HStack {
+                Text(apod.title ?? "title")
+                    .font(.title)
+                Spacer()
+            }
+            .padding(.bottom)
+            Text(apod.explanation ?? "text")
+                .multilineTextAlignment(.center)
+                .font(.system(.title2, design: .monospaced))
         }
-        HStack {
-            Text(apod.title ?? "title")
-                .font(.title)
-            Spacer()
-        }
-        .padding(.vertical)
-        Text(apod.explanation ?? "text")
-            .multilineTextAlignment(.center)
-            .font(.system(.title2, design: .monospaced))
     }
 }
 

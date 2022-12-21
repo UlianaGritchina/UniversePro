@@ -22,9 +22,8 @@ struct MainView: View {
                     .offset(y: vm.networkState == .loaded ? -100 : 0)
                 
                 if vm.networkState == .loaded {
-                    ScrollView(showsIndicators: false) {
-                        ApodInfoView(apod: vm.apod).padding()
-                    }
+                    ApodInfoView(apod: vm.apod)
+                        .padding(.horizontal)
                 }
                 
                 Color.black
