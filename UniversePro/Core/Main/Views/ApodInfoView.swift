@@ -12,34 +12,48 @@ struct ApodInfoView: View {
     @State private var isFavorite = false
     var body: some View {
         ScrollView(showsIndicators: false) {
-            Image(uiImage: (UIImage(data: apod.imageData ?? Data()) ?? UIImage(systemName: "heart"))!)
-                .resizable()
-                .scaledToFit()
-                .cornerRadius(10)
-            HStack {
-                VStack(alignment: .leading) {
-                    Text(apod.copyright ?? "")
-                    Text(apod.date ?? "title")
-                        .font(.subheadline)
-                }
-                Spacer()
+            VStack {
+                Image(uiImage: (UIImage(data: apod.imageData ?? Data()) ?? UIImage(named: "photo")!))
+                    .resizable()
+                    .scaledToFit()
+                    .cornerRadius(10)
                 
-                CircleButtonView(
-                    titel: isFavorite ? "❤️" : "🖤",
-                    foregroundColor: isFavorite ? .purple : .gray) {
-                        isFavorite.toggle()
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text(apod.copyright ?? "")
+                        Text(apod.date ?? "title")
+                            .font(.subheadline)
                     }
+                    
+                    Spacer()
+                    
+                    CircleButtonView(
+                        titel: isFavorite ? "❤️" : "🖤",
+                        foregroundColor: isFavorite ? .purple : .gray) {
+                            isFavorite.toggle()
+                        }
+                }
+                .padding(.bottom)
+                .padding(.horizontal)
             }
+            .background(.ultraThinMaterial)
+            .cornerRadius(10)
             .padding(.vertical)
-            HStack {
-                Text(apod.title ?? "title")
-                    .font(.title)
-                Spacer()
+            
+            VStack {
+                HStack {
+                    Text(apod.title ?? "title")
+                        .font(.title2)
+                    Spacer()
+                }
+                .padding(.bottom)
+                Text(apod.explanation ?? "text")
+                    .multilineTextAlignment(.center)
+                    .font(.system(.title3, design: .monospaced))
             }
-            .padding(.bottom)
-            Text(apod.explanation ?? "text")
-                .multilineTextAlignment(.center)
-                .font(.system(.title2, design: .monospaced))
+            .padding()
+            .background(.ultraThinMaterial)
+            .cornerRadius(10)
         }
     }
 }

@@ -9,11 +9,16 @@ import SwiftUI
 
 struct BackgroundView: View {
     var body: some View {
-        RadialGradient(
-            colors: [Color("spaceBlue"), .black],
-            center: .bottom,
-            startRadius: 105, endRadius: UIScreen.main.bounds.height / 1.3
-        )
+        ZStack {
+            Image("back")
+                .resizable()
+                .clipped()
+            RadialGradient(
+                colors: [Color("spaceBlue"), .black.opacity(0.7)],
+                center: .bottom,
+                startRadius: 105, endRadius: UIScreen.main.bounds.height / 1.3
+            )
+        }
         .ignoresSafeArea()
     }
 }

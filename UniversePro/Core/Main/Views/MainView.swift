@@ -23,7 +23,6 @@ struct MainView: View {
                 
                 if vm.networkState == .loaded {
                     ApodInfoView(apod: vm.apod)
-                        .padding(.horizontal)
                 }
                 
                 Color.black
