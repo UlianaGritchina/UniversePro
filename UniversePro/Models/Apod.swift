@@ -8,6 +8,7 @@
 import Foundation
 
 struct Apod: Hashable, Decodable {
+    let copyright: String?
     let title: String?
     let date: String?
     let explanation: String?

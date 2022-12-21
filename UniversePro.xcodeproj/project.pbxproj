@@ -12,7 +12,6 @@
 		0E5FB8822949F1F1009B1878 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FB8812949F1F1009B1878 /* MainView.swift */; };
 		0E5FB8842949F1F1009B1878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5FB8832949F1F1009B1878 /* Assets.xcassets */; };
 		0E5FB8872949F1F1009B1878 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5FB8862949F1F1009B1878 /* Preview Assets.xcassets */; };
-		0E5FB8912949F4B5009B1878 /* FindButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FB8902949F4B5009B1878 /* FindButtonView.swift */; };
 		0E5FB8952949F582009B1878 /* StarterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FB8942949F582009B1878 /* StarterView.swift */; };
 		0E5FB8982949FC4C009B1878 /* FakeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FB8972949FC4C009B1878 /* FakeDataManager.swift */; };
 		0E5FB89B2949FC6F009B1878 /* Apod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FB89A2949FC6F009B1878 /* Apod.swift */; };
@@ -25,6 +24,7 @@
 		0ED8757B294A163000FD59CB /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED8757A294A163000FD59CB /* BackgroundView.swift */; };
 		0ED8757E294A17AB00FD59CB /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED8757D294A17AB00FD59CB /* LoadingView.swift */; };
 		0ED87580294A1CC000FD59CB /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED8757F294A1CC000FD59CB /* DatePickerView.swift */; };
+		0EFE45FB2953342C00EF7055 /* CIrcleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE45FA2953342C00EF7055 /* CIrcleButtonView.swift */; };
 		19AC1E7BE47C45251F193A7F /* Pods_UniversePro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462DD89E0B3D8189B3B7AA07 /* Pods_UniversePro.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +35,6 @@
 		0E5FB8812949F1F1009B1878 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		0E5FB8832949F1F1009B1878 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E5FB8862949F1F1009B1878 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0E5FB8902949F4B5009B1878 /* FindButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindButtonView.swift; sourceTree = "<group>"; };
 		0E5FB8942949F582009B1878 /* StarterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterView.swift; sourceTree = "<group>"; };
 		0E5FB8972949FC4C009B1878 /* FakeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataManager.swift; sourceTree = "<group>"; };
 		0E5FB89A2949FC6F009B1878 /* Apod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apod.swift; sourceTree = "<group>"; };
@@ -48,6 +47,7 @@
 		0ED8757A294A163000FD59CB /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		0ED8757D294A17AB00FD59CB /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0ED8757F294A1CC000FD59CB /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		0EFE45FA2953342C00EF7055 /* CIrcleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIrcleButtonView.swift; sourceTree = "<group>"; };
 		462DD89E0B3D8189B3B7AA07 /* Pods_UniversePro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniversePro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E92461259770F5FC6CAF881 /* Pods-UniversePro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniversePro.release.xcconfig"; path = "Target Support Files/Pods-UniversePro/Pods-UniversePro.release.xcconfig"; sourceTree = "<group>"; };
 		F2E916EFF0A80DABE1B21B6F /* Pods-UniversePro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniversePro.debug.xcconfig"; path = "Target Support Files/Pods-UniversePro/Pods-UniversePro.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,8 +130,8 @@
 				0E5FB8812949F1F1009B1878 /* MainView.swift */,
 				0EBDA6A6294CA5DD00E09C5E /* AnimationView.swift */,
 				0ED8757F294A1CC000FD59CB /* DatePickerView.swift */,
+				0EFE45FA2953342C00EF7055 /* CIrcleButtonView.swift */,
 				0ED87578294A152600FD59CB /* ApodInfoView.swift */,
-				0E5FB8902949F4B5009B1878 /* FindButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -328,12 +328,12 @@
 				0ED8757E294A17AB00FD59CB /* LoadingView.swift in Sources */,
 				0E5FB89D2949FDC7009B1878 /* ApodApiManager.swift in Sources */,
 				0ED87579294A152600FD59CB /* ApodInfoView.swift in Sources */,
+				0EFE45FB2953342C00EF7055 /* CIrcleButtonView.swift in Sources */,
 				0ED87580294A1CC000FD59CB /* DatePickerView.swift in Sources */,
 				0EBDA6A7294CA5DD00E09C5E /* AnimationView.swift in Sources */,
 				0E5FB8982949FC4C009B1878 /* FakeDataManager.swift in Sources */,
 				0E5FB8802949F1F1009B1878 /* UniverseProApp.swift in Sources */,
 				0E5FB8952949F582009B1878 /* StarterView.swift in Sources */,
-				0E5FB8912949F4B5009B1878 /* FindButtonView.swift in Sources */,
 				0E5FB89F2949FED0009B1878 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

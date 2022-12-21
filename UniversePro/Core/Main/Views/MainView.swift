@@ -55,11 +55,13 @@ struct MainView: View {
             .preferredColorScheme(.dark)
             .toolbar {
                 ToolbarItem {
-                    FindButtonView(action: {
-                        withAnimation {
-                            vm.showDaetPicker()
+                    CircleButtonView(
+                        titel: "🔍",
+                        foregroundColor: .blue) {
+                            withAnimation {
+                                vm.showDaetPicker()
+                            }
                         }
-                    })
                 }
             }
         }

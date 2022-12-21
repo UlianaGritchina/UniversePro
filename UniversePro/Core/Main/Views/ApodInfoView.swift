@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ApodInfoView: View {
     let apod: Apod
+    @State private var isFavorite = false
     var body: some View {
         VStack {
             Image(uiImage: (UIImage(data: apod.imageData ?? Data()) ?? UIImage(systemName: "heart"))!)
@@ -16,22 +17,32 @@ struct ApodInfoView: View {
                 .scaledToFit()
                 .cornerRadius(10)
             HStack {
+                VStack(alignment: .leading) {
+                    Text(apod.copyright ?? "")
+                    Text(apod.date ?? "title")
+                        .font(.subheadline)
+                }
                 Spacer()
-                Text(apod.date ?? "title")
-                    .font(.subheadline)
+                
+                CircleButtonView(
+                    titel: isFavorite ? "❤️" : "🖤",
+                    foregroundColor: isFavorite ? .purple : .gray) {
+                        isFavorite.toggle()
+                    }
             }
-            HStack {
-                Text(apod.title ?? "title")
-                    .font(.title)
-                Spacer()
-            }
-            .padding(.vertical)
-            Text(apod.explanation ?? "text")
-                .multilineTextAlignment(.center)
-                .font(.system(.title2, design: .monospaced))
         }
+        HStack {
+            Text(apod.title ?? "title")
+                .font(.title)
+            Spacer()
+        }
+        .padding(.vertical)
+        Text(apod.explanation ?? "text")
+            .multilineTextAlignment(.center)
+            .font(.system(.title2, design: .monospaced))
     }
 }
+
 
 struct ApodInfoView_Previews: PreviewProvider {
     static var previews: some View {

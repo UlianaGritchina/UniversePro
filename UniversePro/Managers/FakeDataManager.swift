@@ -12,6 +12,6 @@ class FakeDataManager {
     private init() { }
     
     func getApod() -> Apod {
-        Apod(title: "title", date: "date", explanation: "explanation", url: "url", media_type: "media_type")
+        Apod(copyright: "Uliana Gritchina", title: "title", date: "date", explanation: "explanation", url: "url", media_type: "media_type")
     }
 }
