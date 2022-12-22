@@ -91,11 +91,11 @@
 				0E5FB87F2949F1F1009B1878 /* UniverseProApp.swift */,
 				0E5FB8832949F1F1009B1878 /* Assets.xcassets */,
 				0E64F23E29537CBD004D9921 /* Launch Screen.storyboard */,
+				0E5FB8852949F1F1009B1878 /* Preview Content */,
 				0EBDA6A9294CA6E400E09C5E /* Lottie */,
 				0E5FB8962949FC40009B1878 /* Managers */,
 				0E5FB8992949FC61009B1878 /* Models */,
 				0E5FB88D2949F45E009B1878 /* Core */,
-				0E5FB8852949F1F1009B1878 /* Preview Content */,
 			);
 			path = UniversePro;
 			sourceTree = "<group>";

@@ -33,8 +33,7 @@ struct ApodInfoView: View {
                             isFavorite.toggle()
                         }
                 }
-                .padding(.bottom)
-                .padding(.horizontal)
+                .padding()
             }
             .background(.ultraThinMaterial)
             .cornerRadius(10)
