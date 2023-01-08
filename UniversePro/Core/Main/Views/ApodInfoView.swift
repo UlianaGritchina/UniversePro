@@ -11,49 +11,49 @@ struct ApodInfoView: View {
     let apod: Apod
     @State private var isFavorite = false
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack {
-                Image(uiImage: (UIImage(data: apod.imageData ?? Data()) ?? UIImage(named: "photo")!))
-                    .resizable()
-                    .scaledToFit()
-                    .cornerRadius(10)
-                
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text(apod.copyright ?? "")
-                        Text(apod.date ?? "title")
-                            .font(.subheadline)
-                    }
-                    
-                    Spacer()
-                    
-                    CircleButtonView(
-                        titel: isFavorite ? "❤️" : "🖤",
-                        foregroundColor: isFavorite ? .purple : .gray) {
-                            isFavorite.toggle()
-                        }
-                }
-                .padding()
-            }
-            .background(.ultraThinMaterial)
-            .cornerRadius(10)
-            .padding(.vertical)
+        VStack {
+            Image(uiImage: (UIImage(data: apod.imageData ?? Data()) ?? UIImage(named: "back")!))
+                .resizable()
+                .scaledToFit()
+                .cornerRadius(10)
             
-            VStack {
+            HStack {
+                VStack(alignment: .leading) {
+                    Text(apod.copyright ?? "")
+                    Text(apod.date ?? "title")
+                        .font(.subheadline)
+                }
+                
+                Spacer()
+                
+                CircleButtonView(
+                    titel: isFavorite ? "❤️" : "🖤",
+                    foregroundColor: isFavorite ? .purple : .gray) {
+                        isFavorite.toggle()
+                    }
+            }
+            .padding([.horizontal, .top])
+            VStack(spacing: 0) {
                 HStack {
                     Text(apod.title ?? "title")
                         .font(.title2)
                     Spacer()
                 }
-                .padding(.bottom)
-                Text(apod.explanation ?? "text")
-                    .multilineTextAlignment(.center)
-                    .font(.system(.title3, design: .monospaced))
+                ScrollView(showsIndicators: false) {
+                    Text("")
+                    Text(apod.explanation ?? "text")
+                        .multilineTextAlignment(.center)
+                        .font(.system(.title3, design: .monospaced))
+                    Rectangle()
+                        .opacity(0)
+                        .frame(height: 80)
+                }
             }
-            .padding()
-            .background(.ultraThinMaterial)
-            .cornerRadius(10)
+            .padding(.horizontal)
         }
+        .cornerRadius(10)
+        .ignoresSafeArea()
+        
     }
 }
 

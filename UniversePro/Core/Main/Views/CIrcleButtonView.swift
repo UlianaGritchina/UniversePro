@@ -16,7 +16,7 @@ struct CircleButtonView: View {
             Circle()
                 .frame(width: 40, height: 40)
                 .foregroundColor(foregroundColor)
-                .opacity(0.3)
+                .opacity(0.4)
                 .shadow(radius: 2)
                 .overlay { Text(titel) }
             
