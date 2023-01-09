@@ -14,7 +14,6 @@ struct AnimationView: UIViewRepresentable {
         let view = UIView()
         
         let animation = LottieAnimation.named("spaceX")
-        
         let animationView = LottieAnimationView()
         animationView.animation = animation
         animationView.play()

@@ -11,7 +11,7 @@ struct BackgroundView: View {
     var body: some View {
         ZStack {
             VStack {
-                Image("back1")
+                Image("back4")
                     .resizable()
                     .scaledToFit()
                 Spacer()

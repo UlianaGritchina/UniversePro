@@ -11,35 +11,31 @@ struct ApodInfoView: View {
     let apod: Apod
     @State private var isFavorite = false
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             Image(uiImage: (UIImage(data: apod.imageData ?? Data()) ?? UIImage(named: "back")!))
                 .resizable()
                 .scaledToFit()
                 .cornerRadius(10)
-            
-            HStack {
-                VStack(alignment: .leading) {
-                    Text(apod.copyright ?? "")
-                    Text(apod.date ?? "title")
-                        .font(.subheadline)
-                }
-                
-                Spacer()
-                
-                CircleButtonView(
-                    titel: isFavorite ? "❤️" : "🖤",
-                    foregroundColor: isFavorite ? .purple : .gray) {
-                        isFavorite.toggle()
-                    }
-            }
-            .padding([.horizontal, .top])
-            VStack(spacing: 0) {
+            ScrollView(showsIndicators: false) {
+                Rectangle()
+                    .frame(height: 15)
+                    .opacity(0)
                 HStack {
-                    Text(apod.title ?? "title")
-                        .font(.title2)
+                    VStack(alignment: .leading) {
+                        Text(apod.copyright ?? "")
+                        Text(apod.date ?? "title")
+                            .font(.subheadline)
+                    }
                     Spacer()
                 }
-                ScrollView(showsIndicators: false) {
+                .padding()
+                VStack(spacing: 0) {
+                    HStack {
+                        Text(apod.title ?? "title")
+                            .font(.title2)
+                        Spacer()
+                    }
+                    
                     Text("")
                     Text(apod.explanation ?? "text")
                         .multilineTextAlignment(.center)
@@ -47,15 +43,27 @@ struct ApodInfoView: View {
                     Rectangle()
                         .opacity(0)
                         .frame(height: 80)
+                    
                 }
+                .padding(.horizontal)
             }
-            .padding(.horizontal)
+            .ignoresSafeArea()
+            .overlay (
+                HStack {
+                    Spacer()
+                    CircleButtonView(
+                        titel: isFavorite ? "❤️" : "🖤",
+                        foregroundColor: isFavorite ? .purple : .gray) {
+                            isFavorite.toggle()
+                        }
+                }.padding() , alignment: .topTrailing
+            )
         }
-        .cornerRadius(10)
-        .ignoresSafeArea()
         
     }
 }
+
+
 
 
 struct ApodInfoView_Previews: PreviewProvider {
